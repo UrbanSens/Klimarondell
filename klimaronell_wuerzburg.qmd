@@ -27,55 +27,19 @@ In diesem Abschnitt analysieren wir die Temperaturdaten der Stadt Würzburg, die
 Die folgende Grafik zeigt den Temperaturverlauf im Zeitraum von Juli bis September und gibt Aufschluss über die klimatischen Bedingungen in dieser Zeit.
 
 
-```{r temperature-city-plot-smooth, echo=FALSE}
-library(ggplot2)
-library(dplyr)
 
-# Daten laden
-data <- read.csv("https://raw.githubusercontent.com/your-username/Klimarondell/main/data/data_5705.csv")
 
-# 'SDO_ID' in Datum und Uhrzeit umwandeln
-data$SDO_ID <- as.POSIXct(data$SDO_ID, format="%Y-%m-%d %H:%M:%S")
 
-# Daten filtern
-filtered_data <- data %>%
-  select(SDO_ID, Wert) %>%
-  drop_na() %>%
-  arrange(SDO_ID)
-
-# Glatten Linienplot erstellen
-ggplot(filtered_data, aes(x=SDO_ID, y=Wert)) +
-  geom_line(color='blue', size=1, alpha=0.5) +
-  geom_smooth(method="loess", span=0.1, se=FALSE, color="red", size=1.5) +
-  labs(title='Temperature Over Time in Würzburg (Smoothed)', x='Time', y='Temperature (°C)') +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle=45, hjust=1))
-
-```
 
 Die Temperatur in Würzburg zeigt im betrachteten Zeitraum Schwankungen, was auf verschiedene Wetterbedingungen zurückzuführen ist. Diese Daten dienen als Grundlage für unsere weitere Analyse.
 
-## IoT-Daten des Klimarondells
+## Interactive Visualization of Klimarondell Data
 
-Im nächsten Schritt betrachten wir die IoT-Daten, die direkt vom Klimarondell gesammelt wurden. Die Daten könnten verschiedene Umweltvariablen wie Temperatur, Luftfeuchtigkeit und Luftqualität umfassen.
 
-```{r iot-data-plot, echo=FALSE}
-# Erzeugen von Dummy-Daten
-iot_data <- data.frame(
-  date=date_seq, 
-  temperature=rnorm(31, mean=22, sd=3),
-  humidity=rnorm(31, mean=60, sd=10),
-  air_quality=rnorm(31, mean=50, sd=5)
-)
 
-# Plot
-ggplot(iot_data, aes(x=date)) +
-  geom_line(aes(y=temperature), color="red") +
-  geom_line(aes(y=humidity), color="blue") +
-  geom_line(aes(y=air_quality), color="green") +
-  labs(title="IoT-Daten des Klimarondells", x="Datum", y="Werte", color="Variable") +
-  scale_color_manual(values=c("red"="Temperatur", "blue"="Luftfeuchtigkeit", "green"="Luftqualität"))
-```
+<iframe src="https://opendata.wuerzburg.de/chart/embed/klimarondell2/?&static=false&datasetcard=false" width="800" height="600" frameborder="0"></iframe>
+
+
 
 Die IoT-Daten zeigen, dass das Klimarondell eine kühlende Wirkung auf seine unmittelbare Umgebung hat und somit zur Verbesserung des Mikroklimas beiträgt.
 
@@ -83,22 +47,21 @@ Die IoT-Daten zeigen, dass das Klimarondell eine kühlende Wirkung auf seine unm
 
 Abschließend werfen wir einen Blick auf die Satellitendaten, um ein umfassendes Bild der Situation zu erhalten.
 
+![RathausPlatz](Main_Final.png)
+
+
+
+UrbanSens hat im Rahmen einer innovativen Analyse Satellitendaten der Copernicus-Serie der Europäischen Weltraumorganisation (ESA) genutzt, um die Landoberflächentemperatur in einem spezifischen Gebiet zu untersuchen. Diese Technologie, auch als Earth Observation (EO) bekannt, ermöglicht es uns, aus dem Weltraum präzise Messungen und Beobachtungen der Erdoberfläche durchzuführen.
+
+Die Copernicus-Satelliten tragen eine Vielzahl von Instrumenten, die in der Lage sind, verschiedene Arten von Daten zu sammeln, einschließlich der Temperatur der Landoberfläche. Diese Daten sind entscheidend, um Veränderungen in unserer Umwelt zu überwachen und zu verstehen.
+
+Für unsere Analyse haben wir uns auf wöchentliche Daten konzentriert und die Veränderungen der Pixel in dem Gebiet ausgewertet, in dem das Klimarondell aufgestellt war. Die Pixel in den Satellitenbildern repräsentieren spezifische Bereiche auf der Erdoberfläche, und jede Änderung in ihrer Helligkeit oder Farbe kann auf eine Veränderung in den Umweltbedingungen hindeuten.
+
 ![RathausPlatz](RathausPlatz_before_after2.png)
 
-```{r satellite-data-plot, echo=FALSE}
-# Erzeugen von Dummy-Daten
-satellite_data <- data.frame(
-  date=date_seq, 
-  ndvi=rnorm(31, mean=0.5, sd=0.1)
-)
 
-# Plot
-ggplot(satellite_data, aes(x=date, y=ndvi)) +
-  geom_line() +
-  labs(title="Satellitendaten: NDVI in Würzburg", x="Datum", y="NDVI")
-```
 
-Die Satellitendaten liefern wertvolle Informationen über die Vegetation in der Region und tragen dazu bei, die Effekte des Klimarondells auf einer größeren Skala zu verstehen.
+Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, ob es eine spürbare Veränderung in der Landoberflächentemperatur gegeben hat. Dies ermöglichte es uns, die Effektivität des Klimarondells bei der Beeinflussung der lokalen Temperaturbedingungen zu bewerten.
 
 # Fazit und Ausblick
 
