@@ -27,6 +27,55 @@ In diesem Abschnitt analysieren wir die Temperaturdaten der Stadt Würzburg, die
 Die folgende Grafik zeigt den Temperaturverlauf im Zeitraum von Juli bis September und gibt Aufschluss über die klimatischen Bedingungen in dieser Zeit.
 
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(readr)
+library(dplyr)
+library(lubridate)
+library(plotly)
+
+{r
+
+# Load the dataset
+file_path <- "https://raw.githubusercontent.com/UrbanSens/Klimarondell/main/data/data_5705.csv"
+data <- read_csv(file_path)
+
+# Rename columns for clarity
+data <- data %>%
+  rename(Timestamp = SDO_ID, Temperature = Zeitstempel)
+
+# Convert the 'Timestamp' column to datetime format
+data$Timestamp <- ymd_hms(data$Timestamp)
+
+# Convert the dataframe to a tibble and print the first few rows
+data <- as_tibble(data)
+head(data)
+
+{r
+
+# Process the data
+weekly_data <- data %>%
+  group_by(week = floor_date(Timestamp, "week")) %>%
+  summarize(
+    Min_Temperature = min(Temperature, na.rm = TRUE),
+    Max_Temperature = max(Temperature, na.rm = TRUE),
+    Mean_Temperature = mean(Temperature, na.rm = TRUE)
+  )
+
+{r
+
+# Create an interactive plot
+fig <- plot_ly(data = weekly_data, x = ~week) %>%
+  add_lines(y = ~Min_Temperature, name = 'Min Temperature', line = list(color = 'blue')) %>%
+  add_lines(y = ~Max_Temperature, name = 'Max Temperature', line = list(color = 'red')) %>%
+  add_lines(y = ~Mean_Temperature, name = 'Mean Temperature', line = list(color = 'green')) %>%
+  layout(title = 'Weekly Temperature Time Series',
+         xaxis = list(title = 'Week'),
+         yaxis = list(title = 'Temperature (°C)'))
+
+# Show the plot
+fig
+```
 
 
 
@@ -67,6 +116,4 @@ Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimar
 
 Auf Basis der analysierten Daten können wir festhalten, dass das Klimarondell einen positiven Einfluss auf das Mikroklima im Bereich seines Standortes hat. Es trägt dazu bei, die Temperatur zu senken, die Luft zu reinigen und bietet gleichzeitig einen angenehmen Aufenthaltsort im Freien. Dieses Projekt zeigt, wie innovative Lösungen zur Anpassung an den Klimawandel beitragen und die Lebensqualität in städtischen Gebieten verbessern können.
 
-# Wie können Sie sich beteiligen?
-
-Das Klimarondell ist ein Pilotprojekt, und wir sind auf Ihr Feedback angewiesen, um es weiter zu verbessern. Besuchen Sie den Standort, erleben Sie die Vorteile selbst und teilen Sie uns Ihre Meinung mit. Gemeinsam können wir an einer kühleren und lebenswerteren Stadt arbeiten.
+‚
