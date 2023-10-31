@@ -52,19 +52,19 @@ Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. Sept
 
 Die IoT-Daten zeigen, dass das Klimarondell eine kühlende Wirkung auf seine unmittelbare Umgebung hat und somit zur Verbesserung des Mikroklimas beiträgt.
 
-## Satellitendaten
+## Earth Observation: Satellitendaten in der Analyse 
 
-Abschließend werfen wir einen Blick auf die Satellitendaten, um ein umfassendes Bild der Situation zu erhalten.
+UrbanSens hat in einer innovativen Analyse Satellitendaten der Copernicus-Serie der Europäischen Weltraumorganisation (ESA) sowie der Landsat 8 und Landsat 9 Satelliten der NASA genutzt, um die Landoberflächentemperatur in einem spezifischen Gebiet zu untersuchen. Diese Technologie, auch als Earth Observation (EO) bekannt, ermöglicht präzise Messungen und Beobachtungen der Erdoberfläche aus dem Weltraum.
+
+Die Copernicus- und Landsat-Satelliten tragen eine Vielzahl von Instrumenten, die in der Lage sind, verschiedene Arten von Daten zu sammeln, einschließlich der Temperatur der Landoberfläche Emissivitäts Werte). Diese Daten sind entscheidend, um Veränderungen in unserer Umwelt zu überwachen und zu verstehen. Die Pixel in den Satellitenbildern repräsentieren spezifische Bereiche auf der Erdoberfläche, und jede Änderung in ihrer Helligkeit oder Farbe kann auf eine Veränderung in den Umweltbedingungen hindeuten.
+
 
 ![RathausPlatz](Main_Final.png)
 
+Die Landsat-Satelliten sind mit spezialisierten Sensoren ausgestattet, die auf eine Reihe von thermischen Wellenlängen/thermischer Infrarotstrahlung empfindlich sind. Sie messen nicht die Lufttemperatur, sondern die thermischen Eigenschaften der Erdoberfläche selbst, insbesondere die Emissivität – die Effizienz, mit der ein Material thermische Energie ausstrahlt.
 
+Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der Auflösung unserer Daten. UrbanSens hat einen Downscaling-Algorithmus verwendet, der auf den unterschiedlichen Abstrahleigenschaften von Landbedeckungsklassen basiert, um eine höhere Auflösung zu erzielen.
 
-UrbanSens hat im Rahmen einer innovativen Analyse Satellitendaten der Copernicus-Serie der Europäischen Weltraumorganisation (ESA) genutzt, um die Landoberflächentemperatur in einem spezifischen Gebiet zu untersuchen. Diese Technologie, auch als Earth Observation (EO) bekannt, ermöglicht es uns, aus dem Weltraum präzise Messungen und Beobachtungen der Erdoberfläche durchzuführen.
-
-Die Copernicus-Satelliten tragen eine Vielzahl von Instrumenten, die in der Lage sind, verschiedene Arten von Daten zu sammeln, einschließlich der Temperatur der Landoberfläche. Diese Daten sind entscheidend, um Veränderungen in unserer Umwelt zu überwachen und zu verstehen.
-
-Für unsere Analyse haben wir uns auf wöchentliche Daten konzentriert und die Veränderungen der Pixel in dem Gebiet ausgewertet, in dem das Klimarondell aufgestellt war. Die Pixel in den Satellitenbildern repräsentieren spezifische Bereiche auf der Erdoberfläche, und jede Änderung in ihrer Helligkeit oder Farbe kann auf eine Veränderung in den Umweltbedingungen hindeuten.
 
 ![](RathausPlatz_before_after2.png)
 
