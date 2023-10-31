@@ -26,12 +26,13 @@ In diesem Abschnitt analysieren wir die Temperaturdaten der Stadt Würzburg, die
 
 Die folgende Grafik zeigt den Temperaturverlauf im Zeitraum von Juli bis September und gibt Aufschluss über die klimatischen Bedingungen in dieser Zeit.
 
+
 ```{r temperature-city-plot-smooth, echo=FALSE}
 library(ggplot2)
 library(dplyr)
 
 # Daten laden
-data <- read.csv("/mnt/data/data_5705.csv")
+data <- read.csv("https://raw.githubusercontent.com/your-username/Klimarondell/main/data/data_5705.csv")
 
 # 'SDO_ID' in Datum und Uhrzeit umwandeln
 data$SDO_ID <- as.POSIXct(data$SDO_ID, format="%Y-%m-%d %H:%M:%S")
