@@ -66,11 +66,13 @@ Die Copernicus-Satelliten tragen eine Vielzahl von Instrumenten, die in der Lage
 
 Für unsere Analyse haben wir uns auf wöchentliche Daten konzentriert und die Veränderungen der Pixel in dem Gebiet ausgewertet, in dem das Klimarondell aufgestellt war. Die Pixel in den Satellitenbildern repräsentieren spezifische Bereiche auf der Erdoberfläche, und jede Änderung in ihrer Helligkeit oder Farbe kann auf eine Veränderung in den Umweltbedingungen hindeuten.
 
-![RathausPlatz](RathausPlatz_before_after2.png)
+![](RathausPlatz_before_after2.png)
 
 
 
 Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, ob es eine spürbare Veränderung in der Landoberflächentemperatur gegeben hat. Dies ermöglichte es uns, die Effektivität des Klimarondells bei der Beeinflussung der lokalen Temperaturbedingungen zu bewerten.
+
+<iframe src="https://opendata.wuerzburg.de/explore/embed/dataset/satellitenbeobachtung-rathausplatz/analyze/?location=22,49.79408,9.92809&basemap=jawg.streets&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6Ik1JTiIsInlBeGlzIjoidmFsdWUiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNjZjMmE1In1dLCJ4QXhpcyI6ImRhdGUiLCJtYXhwb2ludHMiOiIiLCJ0aW1lc2NhbGUiOiJtb250aCIsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6InNhdGVsbGl0ZW5iZW9iYWNodHVuZy1yYXRoYXVzcGxhdHoiLCJvcHRpb25zIjp7fX19XSwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&static=false&datasetcard=false" width="800" height="300" frameborder="0"></iframe>
 
 # Fazit und Ausblick
 
