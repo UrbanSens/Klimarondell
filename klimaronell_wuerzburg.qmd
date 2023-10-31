@@ -30,10 +30,6 @@ Das Projekt Klimarondell, eingerichtet im Innenhof des Rathauses auf einer Fläc
 
 ## Temperaturdaten der Stadt
 
-In diesem Abschnitt analysieren wir die Temperaturdaten der Stadt Würzburg, die während der Aufstellung des Klimarondells vor dem Rathaus gesammelt wurden. Die Daten wurden vom Deutschen Wetterdienst (DWD) bereitgestellt.
-
-Die folgende Grafik zeigt den Temperaturverlauf im Zeitraum von Juli bis September und gibt Aufschluss über die klimatischen Bedingungen in dieser Zeit.
-
 Die hier dargestellten Daten stammen vom Deutschen Wetterdienst (DWD). Der DWD ist die nationale meteorologische Dienststelle Deutschlands, die umfassende Wetter- und Klimainformationen für die Öffentlichkeit und spezifische Sektoren wie Verkehr, Landwirtschaft und Katastrophenschutz bereitstellt. Der DWD betreibt ein umfangreiches Netzwerk von Wetterstationen im ganzen Land, um präzise und aktuelle Daten zu sammeln. In Würzburg, einer Stadt in Bayern, ist eine solche Wetterstation in Betrieb. Die hier analysierten Daten stammen von dieser Station und bieten Einblicke in die lokalen Temperaturverhältnisse.
 
 <iframe src="http://htmlpreview.github.io/?https://github.com/UrbanSens/Klimarondell/blob/main/data/temperature_time_series.html" width="100%" height="800px"></iframe>
@@ -43,8 +39,6 @@ Die hier dargestellten Daten stammen vom Deutschen Wetterdienst (DWD). Der DWD i
 Die zur Verfügung gestellten Temperaturdaten des Deutschen Wetterdienstes (DWD) für Würzburg im Zeitraum vom 22. August 2023 bis zum 16. September 2023 bieten einen umfassenden Einblick in die lokalen klimatischen Bedingungen, während gleichzeitig das Klimarondell in der Stadt aufgebaut war. Diese Konstellation ermöglicht eine einzigartige Perspektive auf die urbanen Temperaturverhältnisse.
 
 Die Wetterstation des DWD befindet sich auf einem Hügel am Rande der Stadt und liefert somit Daten, die weniger direkt von den urbanen Wärmeinsel-Effekten beeinflusst sind, welche in den zentraleren, dicht bebauten Stadtteilen auftreten können. Die durchschnittliche Temperatur in diesem Zeitraum lag bei etwa 19.55°C, mit Schwankungen zwischen 9.7°C und 31.1°C. Der Höchstwert von 31.1°C wurde am 24. August um 14:00 Uhr verzeichnet.
-
-
 
 Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. September 2023 deutliche Schwankungen, die auf natürliche Wettervariationen zurückzuführen sind. Diese Schwankungen müssen in weiteren Analysen, insbesondere bei der Untersuchung des Einflusses des Klimarondells, berücksichtigt werden, um präzise Schlussfolgerungen ziehen zu können. 
 
@@ -82,4 +76,26 @@ Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimar
 
 Auf Basis der analysierten Daten können wir festhalten, dass das Klimarondell einen positiven Einfluss auf das Mikroklima im Bereich seines Standortes hat. Es trägt dazu bei, die Temperatur zu senken, die Luft zu reinigen und bietet gleichzeitig einen angenehmen Aufenthaltsort im Freien. Dieses Projekt zeigt, wie innovative Lösungen zur Anpassung an den Klimawandel beitragen und die Lebensqualität in städtischen Gebieten verbessern können.
 
-‚
+## References 
+
+ 
+
+Heaviside, C., Macintyre, H. & Vardoulakis, S. The Urban Heat Island: Implications for Health in a Changing Environment. Curr Envir Health Rpt 4, 296–305 (2017). https://doi.org/10.1007/s40572-017-0150-3 
+
+ 
+
+Oke, T. R. (1982). The energetic basis of the urban heat island. Quarterly journal of the royal meteorological society, 108(455), 1-24. 
+
+ 
+
+Reid, C. E., O’Neill, M. S., Gronlund, C. J., Brines, S. J., Brown, D. G., Diez-Roux, A. V., & Schwartz, J. (2009). Mapping Community Determinants of Heat Vulnerability. Environmental Health Perspectives, 117(11), 1730–1736. https://doi.org/10.1289/ehp.0900683 
+
+ 
+
+Sarrat, C., Lemonsu, A., Masson, V., & Guedalia, D. (2006). Impact of urban heat island on regional atmospheric pollution. Atmospheric Environment, 40(10), 1743–1758. https://doi.org/10.1016/j.atmosenv.2005.11.037 
+
+ 
+
+Vujovic, S., Haddad, B., Karaky, H., Sebaibi, N., & Boutouil, M. (2021). Urban Heat Island: Causes, Consequences, and Mitigation Measures with Emphasis on Reflective and Permeable Pavements. CivilEng, 2(2), 459–484. https://doi.org/10.3390/civileng2020026 
+
+ 
