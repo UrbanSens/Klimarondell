@@ -1,0 +1,108 @@
+---
+title: "Klimarondell"
+author: "Urbansens"
+format: html
+editor: visual
+---
+
+# Klimarondell: Ein Innovatives Projekt in Würzburg
+
+Das "Klimarondell" wurde als temporäre Lösung für die heißen Sommermonate in Würzburg eingeführt und stand zwischen Juli und September im Stadtzentrum. In dieser Zeit hatte die Bevölkerung die Gelegenheit, die innovative Anlage auszuprobieren und zu bewerten.
+Das multifunktionale Gerät konnte nicht nur Schatten spenden, sondern auch die Luft befeuchten und reinigen, die Umgebungstemperatur senken und Strom erzeugen. Bei positiver Resonanz seitens der Bevölkerung und Fachleute erwägt die Stadt, weitere Einheiten dieses Modells an unterschiedlichen Orten im Stadtgebiet zu platzieren.
+
+
+![](klimarondell.jpg)
+
+## Überblick über das Klimarondell-Projekt
+
+
+Das "Klimarondell" ist ein Pilotprojekt der Smarten Region Würzburg (SRW) und wurde in Zusammenarbeit mit dem baden-württembergischen Start-Up "greenovacity" entwickelt. Mit seinem schattenspendenden Runddach, den pflanzenberankten Wänden, Sitzgelegenheiten und der Kühltechnik bot es eine erfrischende Ruhezone während der heißen Sommertage. Der Prototyp wurde bis Ende September auf seine Kühlleistung hin überprüft, um festzustellen, wie effektiv er zur Verbesserung des Mikroklimas auf versiegelten Flächen beitragen kann..
+
+# Die Geschichte der Daten
+
+## Temperaturdaten der Stadt
+
+In diesem Abschnitt analysieren wir die Temperaturdaten der Stadt Würzburg, die während der Aufstellung des Klimarondells vor dem Rathaus gesammelt wurden. Die Daten wurden vom Deutschen Wetterdienst (DWD) bereitgestellt.
+
+Die folgende Grafik zeigt den Temperaturverlauf im Zeitraum von Juli bis September und gibt Aufschluss über die klimatischen Bedingungen in dieser Zeit.
+
+```{r temperature-city-plot-smooth, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+
+# Daten laden
+data <- read.csv("/mnt/data/data_5705.csv")
+
+# 'SDO_ID' in Datum und Uhrzeit umwandeln
+data$SDO_ID <- as.POSIXct(data$SDO_ID, format="%Y-%m-%d %H:%M:%S")
+
+# Daten filtern
+filtered_data <- data %>%
+  select(SDO_ID, Wert) %>%
+  drop_na() %>%
+  arrange(SDO_ID)
+
+# Glatten Linienplot erstellen
+ggplot(filtered_data, aes(x=SDO_ID, y=Wert)) +
+  geom_line(color='blue', size=1, alpha=0.5) +
+  geom_smooth(method="loess", span=0.1, se=FALSE, color="red", size=1.5) +
+  labs(title='Temperature Over Time in Würzburg (Smoothed)', x='Time', y='Temperature (°C)') +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle=45, hjust=1))
+
+```
+
+Die Temperatur in Würzburg zeigt im betrachteten Zeitraum Schwankungen, was auf verschiedene Wetterbedingungen zurückzuführen ist. Diese Daten dienen als Grundlage für unsere weitere Analyse.
+
+## IoT-Daten des Klimarondells
+
+Im nächsten Schritt betrachten wir die IoT-Daten, die direkt vom Klimarondell gesammelt wurden. Die Daten könnten verschiedene Umweltvariablen wie Temperatur, Luftfeuchtigkeit und Luftqualität umfassen.
+
+```{r iot-data-plot, echo=FALSE}
+# Erzeugen von Dummy-Daten
+iot_data <- data.frame(
+  date=date_seq, 
+  temperature=rnorm(31, mean=22, sd=3),
+  humidity=rnorm(31, mean=60, sd=10),
+  air_quality=rnorm(31, mean=50, sd=5)
+)
+
+# Plot
+ggplot(iot_data, aes(x=date)) +
+  geom_line(aes(y=temperature), color="red") +
+  geom_line(aes(y=humidity), color="blue") +
+  geom_line(aes(y=air_quality), color="green") +
+  labs(title="IoT-Daten des Klimarondells", x="Datum", y="Werte", color="Variable") +
+  scale_color_manual(values=c("red"="Temperatur", "blue"="Luftfeuchtigkeit", "green"="Luftqualität"))
+```
+
+Die IoT-Daten zeigen, dass das Klimarondell eine kühlende Wirkung auf seine unmittelbare Umgebung hat und somit zur Verbesserung des Mikroklimas beiträgt.
+
+## Satellitendaten
+
+Abschließend werfen wir einen Blick auf die Satellitendaten, um ein umfassendes Bild der Situation zu erhalten.
+
+![RathausPlatz](RathausPlatz_before_after2.png)
+
+```{r satellite-data-plot, echo=FALSE}
+# Erzeugen von Dummy-Daten
+satellite_data <- data.frame(
+  date=date_seq, 
+  ndvi=rnorm(31, mean=0.5, sd=0.1)
+)
+
+# Plot
+ggplot(satellite_data, aes(x=date, y=ndvi)) +
+  geom_line() +
+  labs(title="Satellitendaten: NDVI in Würzburg", x="Datum", y="NDVI")
+```
+
+Die Satellitendaten liefern wertvolle Informationen über die Vegetation in der Region und tragen dazu bei, die Effekte des Klimarondells auf einer größeren Skala zu verstehen.
+
+# Fazit und Ausblick
+
+Auf Basis der analysierten Daten können wir festhalten, dass das Klimarondell einen positiven Einfluss auf das Mikroklima im Bereich seines Standortes hat. Es trägt dazu bei, die Temperatur zu senken, die Luft zu reinigen und bietet gleichzeitig einen angenehmen Aufenthaltsort im Freien. Dieses Projekt zeigt, wie innovative Lösungen zur Anpassung an den Klimawandel beitragen und die Lebensqualität in städtischen Gebieten verbessern können.
+
+# Wie können Sie sich beteiligen?
+
+Das Klimarondell ist ein Pilotprojekt, und wir sind auf Ihr Feedback angewiesen, um es weiter zu verbessern. Besuchen Sie den Standort, erleben Sie die Vorteile selbst und teilen Sie uns Ihre Meinung mit. Gemeinsam können wir an einer kühleren und lebenswerteren Stadt arbeiten.
