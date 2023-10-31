@@ -8,7 +8,7 @@ editor: visual
 # Klimarondell: Ein Innovatives Projekt in Würzburg
 
 Das "Klimarondell" wurde als temporäre Lösung für die heißen Sommermonate in Würzburg eingeführt und stand zwischen Juli und September im Stadtzentrum. In dieser Zeit hatte die Bevölkerung die Gelegenheit, die innovative Anlage auszuprobieren und zu bewerten.
-Das multifunktionale Gerät konnte nicht nur Schatten spenden, sondern auch die Luft befeuchten und reinigen, die Umgebungstemperatur senken und Strom erzeugen. Bei positiver Resonanz seitens der Bevölkerung und Fachleute erwägt die Stadt, weitere Einheiten dieses Modells an unterschiedlichen Orten im Stadtgebiet zu platzieren.
+Das multifunktionale Gerät wurde daraufhin überprüft, ob es nicht nur Schatten spendete, sondern auch in der Lage war, die Luft zu befeuchten und zu reinigen, die Umgebungstemperatur zu senken sowie Strom zu erzeugen. Bei positiver Resonanz seitens der Bevölkerung und Fachleute erwägt die Stadt, weitere Einheiten dieses Modells an unterschiedlichen Orten im Stadtgebiet zu platzieren.
 
 
 ![](klimarondell.jpg)
@@ -16,7 +16,15 @@ Das multifunktionale Gerät konnte nicht nur Schatten spenden, sondern auch die 
 ## Überblick über das Klimarondell-Projekt
 
 
-Das "Klimarondell" ist ein Pilotprojekt der Smarten Region Würzburg (SRW) und wurde in Zusammenarbeit mit dem baden-württembergischen Start-Up "greenovacity" entwickelt. Mit seinem schattenspendenden Runddach, den pflanzenberankten Wänden, Sitzgelegenheiten und der Kühltechnik bot es eine erfrischende Ruhezone während der heißen Sommertage. Der Prototyp wurde bis Ende September auf seine Kühlleistung hin überprüft, um festzustellen, wie effektiv er zur Verbesserung des Mikroklimas auf versiegelten Flächen beitragen kann..
+Das "Klimarondell" ist ein Pilotprojekt der Smarten Region Würzburg (SRW) und wurde in Zusammenarbeit mit dem baden-württembergischen Start-Up "greenovacity" entwickelt. Mit seinem schattenspendenden Runddach, den pflanzenberankten Wänden, Sitzgelegenheiten und der Kühltechnik bot es eine erfrischende Ruhezone während der heißen Sommertage. Der Prototyp wurde bis Ende September auf seine Kühlleistung hin überprüft, um festzustellen, wie effektiv er zur Verbesserung des Mikroklimas auf versiegelten Flächen beitragen kann.
+
+## Der urbane Wärmeinsel-Effekt
+
+Die zunehmenden Temperaturen in städtischen Gebieten, verstärkt durch den städtischen Wärmeinsel-Effekt (UHI), werden immer mehr zur Sorge. Verursacht wird dieser Effekt hauptsächlich durch anthropogene Faktoren wie die Wärmespeicherung in Beton- und Asphaltflächen, Abwärme von Gebäuden und Verkehr sowie eingeschränkte Luftströmung (Oke, 1982; Vujovic et al., 2021).
+
+Ein tiefgehendes Verständnis der Hitzedynamik in Städten ist entscheidend, da sie die öffentliche Gesundheit, den Energieverbrauch und die Umwelt beeinträchtigt, sowie diverse Gesundheitsprobleme verschärft, besonders in vulnerablen Bevölkerungsgruppen (Heaviside et al., 2017; Sarrat et al., 2006; Yin et al., 2023; Reid et al., 2009). Genauere Messungen der städtischen Hitze können helfen, diese Risiken zu minimieren und die Lebensqualität sowie die Energieeffizienz in Städten zu verbessern.
+
+Das Projekt Klimarondell, eingerichtet im Innenhof des Rathauses auf einer Fläche von über 1400 m², stellt einen innovativen Ansatz zur Milderung städtischer Hitze dar. Obwohl der Ort zu über 90% mit undurchlässigen Materialien bedeckt ist und Bäume wegen eines unterirdischen Parkplatzes nicht gepflanzt werden können, ist er ein zentraler und fußgängerfreundlicher Ort, der zur Verbesserung des Stadtklimas beiträgt.
 
 # Die Geschichte der Daten
 
@@ -26,61 +34,19 @@ In diesem Abschnitt analysieren wir die Temperaturdaten der Stadt Würzburg, die
 
 Die folgende Grafik zeigt den Temperaturverlauf im Zeitraum von Juli bis September und gibt Aufschluss über die klimatischen Bedingungen in dieser Zeit.
 
+Die hier dargestellten Daten stammen vom Deutschen Wetterdienst (DWD). Der DWD ist die nationale meteorologische Dienststelle Deutschlands, die umfassende Wetter- und Klimainformationen für die Öffentlichkeit und spezifische Sektoren wie Verkehr, Landwirtschaft und Katastrophenschutz bereitstellt. Der DWD betreibt ein umfangreiches Netzwerk von Wetterstationen im ganzen Land, um präzise und aktuelle Daten zu sammeln. In Würzburg, einer Stadt in Bayern, ist eine solche Wetterstation in Betrieb. Die hier analysierten Daten stammen von dieser Station und bieten Einblicke in die lokalen Temperaturverhältnisse.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(readr)
-library(dplyr)
-library(lubridate)
-library(plotly)
-
-{r
-
-# Load the dataset
-file_path <- "https://raw.githubusercontent.com/UrbanSens/Klimarondell/main/data/data_5705.csv"
-data <- read_csv(file_path)
-
-# Rename columns for clarity
-data <- data %>%
-  rename(Timestamp = SDO_ID, Temperature = Zeitstempel)
-
-# Convert the 'Timestamp' column to datetime format
-data$Timestamp <- ymd_hms(data$Timestamp)
-
-# Convert the dataframe to a tibble and print the first few rows
-data <- as_tibble(data)
-head(data)
-
-{r
-
-# Process the data
-weekly_data <- data %>%
-  group_by(week = floor_date(Timestamp, "week")) %>%
-  summarize(
-    Min_Temperature = min(Temperature, na.rm = TRUE),
-    Max_Temperature = max(Temperature, na.rm = TRUE),
-    Mean_Temperature = mean(Temperature, na.rm = TRUE)
-  )
-
-{r
-
-# Create an interactive plot
-fig <- plot_ly(data = weekly_data, x = ~week) %>%
-  add_lines(y = ~Min_Temperature, name = 'Min Temperature', line = list(color = 'blue')) %>%
-  add_lines(y = ~Max_Temperature, name = 'Max Temperature', line = list(color = 'red')) %>%
-  add_lines(y = ~Mean_Temperature, name = 'Mean Temperature', line = list(color = 'green')) %>%
-  layout(title = 'Weekly Temperature Time Series',
-         xaxis = list(title = 'Week'),
-         yaxis = list(title = 'Temperature (°C)'))
-
-# Show the plot
-fig
-```
+<iframe src="http://htmlpreview.github.io/?https://github.com/UrbanSens/Klimarondell/blob/main/data/temperature_time_series.html" width="100%" height="800px"></iframe>
 
 
 
+Die zur Verfügung gestellten Temperaturdaten des Deutschen Wetterdienstes (DWD) für Würzburg im Zeitraum vom 22. August 2023 bis zum 16. September 2023 bieten einen umfassenden Einblick in die lokalen klimatischen Bedingungen, während gleichzeitig das Klimarondell in der Stadt aufgebaut war. Diese Konstellation ermöglicht eine einzigartige Perspektive auf die urbanen Temperaturverhältnisse.
 
-Die Temperatur in Würzburg zeigt im betrachteten Zeitraum Schwankungen, was auf verschiedene Wetterbedingungen zurückzuführen ist. Diese Daten dienen als Grundlage für unsere weitere Analyse.
+Die Wetterstation des DWD befindet sich auf einem Hügel am Rande der Stadt und liefert somit Daten, die weniger direkt von den urbanen Wärmeinsel-Effekten beeinflusst sind, welche in den zentraleren, dicht bebauten Stadtteilen auftreten können. Die durchschnittliche Temperatur in diesem Zeitraum lag bei etwa 19.55°C, mit Schwankungen zwischen 9.7°C und 31.1°C. Der Höchstwert von 31.1°C wurde am 24. August um 14:00 Uhr verzeichnet.
+
+
+
+Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. September 2023 deutliche Schwankungen, die auf natürliche Wettervariationen zurückzuführen sind. Diese Schwankungen müssen in weiteren Analysen, insbesondere bei der Untersuchung des Einflusses des Klimarondells, berücksichtigt werden, um präzise Schlussfolgerungen ziehen zu können. 
 
 ## Interactive Visualization of Klimarondell Data
 
