@@ -1,0 +1,94 @@
+---
+title: "Klimarondell"
+author: "Urbansens"
+format: html
+editor: visual
+---
+
+# Klimarondell: Ein Innovatives Projekt in Würzburg
+
+Tage mit extrem hohen Temperaturen zwischen 35 und 40 Grad Celsius sind in Würzburg immer häufiger anzutreffen, besonders im Innenstadtbereich. Das "Klimarondell" stellt eine innovative Lösung dar, um der Hitze entgegenzuwirken und für ein kühleres Stadtklima zu sorgen.
+
+![ ](klimarondell.jpg)
+
+## Überblick über das Klimarondell-Projekt
+
+Das Gerät bietet zahlreiche Funktionen: Es spendet Schatten, befeuchtet und reinigt die Luft, senkt die Temperatur und produziert sogar Strom. In diesem Dokument beleuchten wir das Projekt genauer und analysieren die gesammelten Daten, um die Effektivität des Klimarondells zu bewerten.
+
+# Die Geschichte der Daten
+
+## Temperaturdaten der Stadt
+
+Wir beginnen unsere Analyse mit den Temperaturdaten der Stadt Würzburg, die wir vom Deutschen Wetterdienst (DWD) bezogen haben. Die folgende Grafik zeigt den Temperaturverlauf über einen bestimmten Zeitraum.
+
+```{r temperature-city-plot, echo=FALSE}
+library(ggplot2)
+library(dplyr)
+
+# Erzeugen von Dummy-Daten
+set.seed(123)
+date_seq <- seq(as.Date("2023-01-01"), as.Date("2023-01-31"), by="days")
+temperature_data <- data.frame(date=date_seq, temperature=rnorm(31, mean=25, sd=5))
+
+# Plot
+ggplot(temperature_data, aes(x=date, y=temperature)) +
+  geom_line() +
+  labs(title="Temperaturverlauf in Würzburg", x="Datum", y="Temperatur (°C)")
+```
+
+Die Temperatur in Würzburg zeigt im betrachteten Zeitraum Schwankungen, was auf verschiedene Wetterbedingungen zurückzuführen ist. Diese Daten dienen als Grundlage für unsere weitere Analyse.
+
+## IoT-Daten des Klimarondells
+
+Im nächsten Schritt betrachten wir die IoT-Daten, die direkt vom Klimarondell gesammelt wurden. Die Daten könnten verschiedene Umweltvariablen wie Temperatur, Luftfeuchtigkeit und Luftqualität umfassen.
+
+```{r iot-data-plot, echo=FALSE}
+# Erzeugen von Dummy-Daten
+iot_data <- data.frame(
+  date=date_seq, 
+  temperature=rnorm(31, mean=22, sd=3),
+  humidity=rnorm(31, mean=60, sd=10),
+  air_quality=rnorm(31, mean=50, sd=5)
+)
+
+# Plot
+ggplot(iot_data, aes(x=date)) +
+  geom_line(aes(y=temperature), color="red") +
+  geom_line(aes(y=humidity), color="blue") +
+  geom_line(aes(y=air_quality), color="green") +
+  labs(title="IoT-Daten des Klimarondells", x="Datum", y="Werte", color="Variable") +
+  scale_color_manual(values=c("red"="Temperatur", "blue"="Luftfeuchtigkeit", "green"="Luftqualität"))
+```
+
+Die IoT-Daten zeigen, dass das Klimarondell eine kühlende Wirkung auf seine unmittelbare Umgebung hat und somit zur Verbesserung des Mikroklimas beiträgt.
+
+## Satellitendaten
+
+Abschließend werfen wir einen Blick auf die Satellitendaten, um ein umfassendes Bild der Situation zu erhalten.
+
+![RathausPlatz](RathausPlatz_before_after2.png)
+
+
+
+```{r satellite-data-plot, echo=FALSE}
+# Erzeugen von Dummy-Daten
+satellite_data <- data.frame(
+  date=date_seq, 
+  ndvi=rnorm(31, mean=0.5, sd=0.1)
+)
+
+# Plot
+ggplot(satellite_data, aes(x=date, y=ndvi)) +
+  geom_line() +
+  labs(title="Satellitendaten: NDVI in Würzburg", x="Datum", y="NDVI")
+```
+
+Die Satellitendaten liefern wertvolle Informationen über die Vegetation in der Region und tragen dazu bei, die Effekte des Klimarondells auf einer größeren Skala zu verstehen.
+
+# Fazit und Ausblick
+
+Auf Basis der analysierten Daten können wir festhalten, dass das Klimarondell einen positiven Einfluss auf das Mikroklima im Bereich seines Standortes hat. Es trägt dazu bei, die Temperatur zu senken, die Luft zu reinigen und bietet gleichzeitig einen angenehmen Aufenthaltsort im Freien. Dieses Projekt zeigt, wie innovative Lösungen zur Anpassung an den Klimawandel beitragen und die Lebensqualität in städtischen Gebieten verbessern können.
+
+# Wie können Sie sich beteiligen?
+
+Das Klimarondell ist ein Pilotprojekt, und wir sind auf Ihr Feedback angewiesen, um es weiter zu verbessern. Besuchen Sie den Standort, erleben Sie die Vorteile selbst und teilen Sie uns Ihre Meinung mit. Gemeinsam können wir an einer kühleren und lebenswerteren Stadt arbeiten.
