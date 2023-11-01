@@ -16,6 +16,7 @@ import { fetchSensorCommunityData, getSensorMarkerIconUrl } from '../api/SensorC
 import { fetchAQIData } from '../api/AQIAPI';
 import '../Controls/DrawingComponent.css'; // Replace with the correct path to your CSS file
 
+#test
 
 const styleMap = {
   width: '50%',
