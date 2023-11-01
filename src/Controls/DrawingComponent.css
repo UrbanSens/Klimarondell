@@ -1,0 +1,27 @@
+.drawing-control {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  background: #333; /* Grey background color */
+  color: white; /* Text color */
+  padding: 10px;
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounder corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Slight shadow */
+  font-family: 'Helvetica Neue', sans-serif; /* Apple-like font */
+  font-size: 14px; /* Font size */
+}
+
+.drawing-control button {
+  background: #007AFF; /* Blue button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 6px; /* Rounder button corners */
+  padding: 5px 10px; /* Button padding */
+  cursor: pointer; /* Pointer cursor on the button */
+  margin-left: 5px; /* Add some space between buttons */
+}
+
+.drawing-control button:hover {
+  background: #0055CC; /* Darker blue on hover */
+}
