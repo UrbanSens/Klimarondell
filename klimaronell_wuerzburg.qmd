@@ -70,7 +70,13 @@ Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. Sept
 
 </iframe>
 
+Im Zeitraum vom 23. August 2023 bis zum 7. Oktober 2023 erlebte die Region eine vielfältige Palette klimatischer Bedingungen, wie durch die Schwankungen in den gemessenen Temperatur-, Luftfeuchtigkeits- und Bodenfeuchtigkeitswerten ersichtlich wird. Die Lufttemperaturen schwankten beträchtlich, mit Werten zwischen 7.62 °C und 34.80 °C, was auf den Übergang zwischen den Jahreszeiten oder auf kurzfristige Wetteränderungen hindeuten könnte. Im Durchschnitt lagen die Temperaturen bei etwa 18.48 °C, was auf gemäßigte Bedingungen hinweist, jedoch mit signifikanten täglichen und nächtlichen Temperaturschwankungen.
 
+Die Luftfeuchtigkeit zeigte ebenfalls eine breite Streuung, wobei die Werte am Auslass durchschnittlich bei 79.93% lagen und am Einlass bei 65.01%. Diese Unterschiede könnten auf lokale klimatische oder umgebungsbedingte Faktoren zurückzuführen sein. 
+
+Die Bodenfeuchtigkeit variierte im Laufe des Zeitraums und lag im Durchschnitt bei 7.86, was auf wechselnde Bedingungen für Pflanzenwachstum und Bodengesundheit hindeutet.
+
+Insgesamt zeigen die Daten eine dynamische klimatische Periode mit einer Vielzahl von Bedingungen, die sowohl Herausforderungen als auch Möglichkeiten für die allgemeine Lebensqualität in der Region darstellen könnten. Eine sorgfältige Analyse und Überwachung dieser klimatischen Variablen ist entscheidend, um Anpassungsstrategien zu entwickeln und die langfristige Nachhaltigkeit der Region zu gewährleisten.
 
 ## Earth Observation: Satellitendaten in der Analyse
 
