@@ -56,6 +56,8 @@ Die hier dargestellten Daten stammen vom Deutschen Wetterdienst (DWD). Der DWD i
 <iframe src="http://htmlpreview.github.io/?https://github.com/UrbanSens/Klimarondell/blob/main/data/temperature_time_series.html" width="100%" height="800px">
 
 </iframe>
+[*Deutscher Wetterdienst (DWD)*](https://www.dwd.de/DE/Home/home_node.html)
+
 
 Die zur Verfügung gestellten Temperaturdaten des Deutschen Wetterdienstes (DWD) für Würzburg im Zeitraum vom 22. August 2023 bis zum 16. September 2023 bieten einen umfassenden Einblick in die lokalen klimatischen Bedingungen, während gleichzeitig das Klimarondell in der Stadt aufgebaut war. Diese Konstellation ermöglicht eine einzigartige Perspektive auf die urbanen Temperaturverhältnisse.
 
@@ -89,9 +91,6 @@ Die Copernicus- und Landsat-Satelliten tragen eine Vielzahl von Instrumenten, di
 Die Landsat-Satelliten sind mit spezialisierten Sensoren ausgestattet, die auf eine Reihe von thermischen Wellenlängen/thermischer Infrarotstrahlung empfindlich sind. Sie messen nicht die Lufttemperatur, sondern die thermischen Eigenschaften der Erdoberfläche selbst, insbesondere die Emissivität -- die Effizienz, mit der ein Material thermische Energie ausstrahlt.
 
 Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der Auflösung unserer Daten. UrbanSens hat einen Downscaling-Algorithmus verwendet, der auf den unterschiedlichen Abstrahleigenschaften von Landbedeckungsklassen basiert, um eine höhere Auflösung zu erzielen.
-
-![](RathausPlatz_before_after2.png)
-
 Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, ob es eine spürbare Veränderung in der Landoberflächentemperatur gegeben hat. Dies ermöglichte es uns, die Effektivität des Klimarondells bei der Beeinflussung der lokalen Temperaturbedingungen zu bewerten.
 
 <iframe src="https://opendata.wuerzburg.de/explore/embed/dataset/satellitenbeobachtung-rathausplatz/analyze/?location=22,49.79408,9.92809&amp;basemap=jawg.streets&amp;dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6Ik1JTiIsInlBeGlzIjoidmFsdWUiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNjZjMmE1In1dLCJ4QXhpcyI6ImRhdGUiLCJtYXhwb2ludHMiOiIiLCJ0aW1lc2NhbGUiOiJtb250aCIsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6InNhdGVsbGl0ZW5iZW9iYWNodHVuZy1yYXRoYXVzcGxhdHoiLCJvcHRpb25zIjp7fX19XSwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&amp;static=false&amp;datasetcard=false" width="800" height="300" frameborder="0">
