@@ -1,17 +1,17 @@
 ---
-#title: "Klimarondell: Ein innovatives Projekt in Würzburg"
-#author: "UrbanSens"
-format: html
+  #title: "Klimarondell: Ein innovatives Projekt in Würzburg"
+  #author: "UrbanSens"
+  format: html
 toc: true
 toc-title: "INHALT"
 css: Settings.css
 ---
-
-```{=html}
+  
+  ```{=html}
 <div id="cover-page">
   <div id="header">
-    <img class="left-logo" src="./WB_Logo.svg" alt="WB Logo">
-    <img class="right-logo" src="./logo02.png" alt="Logo 2">
+  <img class="left-logo" src="./WB_Logo.svg" alt="WB Logo">
+  <img class="right-logo" src="./logo02.png" alt="Logo 2">
   </div>
   
   <!-- Bild einfügen -->
@@ -22,8 +22,10 @@ css: Settings.css
   
   <!-- Überschrift -->
   <h1>Smarte Region Würzburg<br> "Klimarondell" </h1>
-</div>
-```
+  </div>
+  
+  ```
+
 # Überblick über das Klimarondell-Projekt
 
 Das Projekt "Klimarondell" ist eine Kooperation im Rahmen der Maßnahme Heimatforum der "Smarten Region Würzburg" und dem Unternehmen "greenovacity". Ziel ist es, mit smarten Technologien die Lebensqualität während der Sommerhitze zu steigern. Ein Ansatzpunkt dabei ist der greenovaTree, ein Produkt des Start-Ups aus Baden-Württemberg. Nach Angaben des Herstellers soll dieser als "Oase in der Stadt" dienen und urbane Räume in kühle Rückzugsorte verwandeln.
@@ -36,11 +38,14 @@ Im Rahmen des Testzeitraums bot das Projekt "Klimarondell" den Bürgerinnen und 
 
 ![Innbetriebnahme des Klimarondell](klimarondell.jpg)
 
+
+
 ## Der urbane Wärmeinsel-Effekt
 
 Steigende Temperaturen in städtischen Bereichen, die durch den Urban Heat Island-Effekt (UHI) verstärkt werden, rücken zunehmend in den Fokus der Stadtbewohner und Planer. Der UHI ist größtenteils auf menschliche Aktivitäten zurückzuführen: Wärme wird in Bauwerken aus Beton und Asphalt gespeichert, die Abwärme von Gebäuden und Verkehr trägt zur Aufheizung bei, und die urbane Struktur limitiert natürliche Luftströmungen (Oke, 1982; Vujovic et al., 2021).
 
 Ein fundiertes Verständnis der Hitzeentwicklung in städtischen Gebieten ist für die Bewertung von städtischen Risiken von Bedeutung, da städtische Hitze wesentliche Auswirkungen auf die öffentliche Gesundheit, den Energieverbrauch und die Umweltqualität hat. Zudem kann eine erhöhte Hitzebelastung gesundheitliche Beschwerden verstärken, insbesondere bei vulnerablen Bevölkerungsgruppen. Studien haben gezeigt, dass eine präzise Erfassung und Analyse städtischer Hitzebelastungen dazu beitragen kann, diese Risiken zu minimieren und dadurch die Lebensqualität sowie die Energieeffizienz in urbanen Räumen zu fördern (Heaviside et al., 2017; Sarrat et al., 2006; Yin et al., 2023; Reid et al., 2009)."
+
 
 # Die Geschichte der Daten
 
@@ -51,8 +56,8 @@ Die hier dargestellten Daten stammen vom Deutschen Wetterdienst (DWD). Der DWD i
 <iframe src="http://htmlpreview.github.io/?https://github.com/UrbanSens/Klimarondell/blob/main/data/temperature_time_series.html" width="100%" height="800px">
 
 </iframe>
-
 [*Deutscher Wetterdienst (DWD)*](https://www.dwd.de/DE/Home/home_node.html)
+
 
 Die zur Verfügung gestellten Temperaturdaten des Deutschen Wetterdienstes (DWD) für Würzburg im Zeitraum vom 22. August 2023 bis zum 16. September 2023 bieten einen umfassenden Einblick in die lokalen klimatischen Bedingungen, während gleichzeitig das Klimarondell in der Stadt aufgebaut war. Diese Konstellation ermöglicht eine einzigartige Perspektive auf die urbanen Temperaturverhältnisse.
 
@@ -62,18 +67,18 @@ Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. Sept
 
 ## Interaktive Visualisierung der gemessenen Daten
 
-<iframe src="https://opendata.wuerzburg.de/chart/embed/klimarondell3/?&amp;static=false&amp;datasetcard=false" width="800" height="600" frameborder="0">
+
+<iframe src="https://opendata.wuerzburg.de/chart/embed/klimarondell3/?&static=false&datasetcard=false" width="800" height="600" frameborder="0"></iframe>
 
 </iframe>
 
-</iframe>
+Im Zeitraum vom 23. August 2023 bis zum 7. Oktober 2023 erlebte die Region eine vielfältige Palette klimatischer Bedingungen, wie durch die Schwankungen in den gemessenen Temperatur-, Luftfeuchtigkeits- und Bodenfeuchtigkeitswerten ersichtlich wird. Die Lufttemperaturen schwankten beträchtlich, mit Werten zwischen 7.62 °C und 34.80 °C, was auf den Übergang zwischen den Jahreszeiten oder auf kurzfristige Wetteränderungen hindeuten könnte. Im Durchschnitt lagen die Temperaturen bei etwa 18.48 °C, was auf gemäßigte Bedingungen hinweist, jedoch mit signifikanten täglichen und nächtlichen Temperaturschwankungen.
 
-Im Fachgebiet der Analyse von Wetterdaten sind eine Vielzahl an Parametern entscheidend für das Verständnis der Umweltbedingungen. Dabei sind besonders Lufttemperatur, Luftfeuchtigkeit und Bodenfeuchtigkeit als wichtige Parameter hervorzuheben. Diese Schlüsselvariablen wurden in unserer aktuellen Wirkungsstudie durch den Einsatz einer IoT-Station beobachtet. Die Station lieferte nicht nur genaue Wetterdaten, sondern generierte durch die Überwachung der Wi-Fi-Nutzer auch Proxy-Daten über die Anzahl der Personen in der Nähe. In diesem Kapitel werden die vom 23. August 2023 bis zum 7. Oktober 2023 gesammelten Daten beschrieben, einschließlich der relevanten Datensätze und ihre Auswirkungen auf die Ergebnisse und Empfehlungen der Studie.  
-Die folgende interaktive Grafik von opendata Würzburg zeigt die gesammelten Daten, mit dem Datum auf der horizontalen (X) Achse und den Messwerten auf der vertikalen (Y) Achse. Die Temperaturwerte sind in Grad Celsius (°C), die Luftfeuchtigkeitswerte in Prozent (%) angegeben. Anhand dieses Diagramms lässt sich auf einfache Weise erkennen, wie sich diese wichtigen Messwerte der Wetterdaten im Laufe der Zeit verändert haben.  
-Während des Untersuchungszeitraums herrschten in der Region sehr unterschiedliche klimatische Bedingungen, wie die Schwankungen der gemessenen Werte für Temperatur, Luftfeuchtigkeit und Bodenfeuchte zeigen. Die Lufttemperaturen schwankten deutlich und lagen zwischen 7,62 °C und 34,80 °C, was auf den Übergang zwischen den Jahreszeiten oder auf kurzfristige Wetteränderungen hinweisen könnte. Im Durchschnitt lagen die Temperaturen bei 18,48 °C, was auf gemäßigte Bedingungen hinweist, allerdings mit erheblichen täglichen und nächtlichen Temperaturschwankungen. Zusätzlich können wir den Verlauf der Lufttemperatur mit der Landoberflächen-Emissivität, die zur Messung der Wärmestrahlung verwendet wurde, vergleichen. Es ist offensichtlich, dass die von den Satellitensensoren gemessenen Temperaturen durchweg höher sind als die in-situ aufgezeichneten. Diese Divergenz könnte auf mehrere Faktoren zurückzuführen sein, darunter Höhenunterschiede, lokale Mikroklimas und unterschiedliche Messmethoden. Dennoch zeichnet sich in beiden Datensätzen ein gemeinsamer Trend ab, der einen allmählichen Rückgang der Temperaturen während des größten Teils des Beobachtungszeitraums zeigt, bis hin zu den niedrigsten Werten Ende September. Interessanterweise gibt es gegen Ende des Beobachtungszeitraums eine bemerkenswerte Abweichung von diesem Trend, die durch einen Aufschwung der Temperaturen gekennzeichnet ist, gefolgt von einer weiteren Phase mit sinkenden Temperaturen.  
-Die Luftfeuchtigkeit wies ebenfalls große Schwankungen auf, mit Durchschnittswerten von 79,93 % am Auslass und 65,01 % am Einlass. Die am Einlass gemessene Luftfeuchtigkeit stimmt mit den vom Messsystem der Smart City Region beobachteten Mustern überein. Eine ausgeprägte Spitze der Luftfeuchtigkeit wurde Anfang September verzeichnet. Gegen Ende des Beobachtungszeitraums wurde ein weiterer starker Anstieg der Luftfeuchtigkeit beobachtet. Diese Muster sind möglicherweise mit spezifischen atmosphärischen Bedingungen oder lokalen Wetterphänomenen verbunden.  
-Die Bodenfeuchtigkeit schwankte im Beobachtungszeitraum und lag im Durchschnitt bei 7,86, was auf wechselnde Bedingungen für das Pflanzenwachstum und die Bodenaktivität hindeutet.  
-Insgesamt zeigen die Daten eine dynamische Klimaperiode mit einer Vielzahl von Bedingungen, die sowohl Herausforderungen als auch Chancen für die allgemeine Lebensqualität in der Region darstellen könnten. Eine sorgfältige Analyse und Überwachung dieser Klimavariablen ist entscheidend für die Entwicklung von Anpassungsstrategien und die Gewährleistung der langfristigen Nachhaltigkeit und Zukunftsfähigkeit der Region.
+Die Luftfeuchtigkeit zeigte ebenfalls eine breite Streuung, wobei die Werte am Auslass durchschnittlich bei 79.93% lagen und am Einlass bei 65.01%. Diese Unterschiede könnten auf lokale klimatische oder umgebungsbedingte Faktoren zurückzuführen sein. 
+
+Die Bodenfeuchtigkeit variierte im Laufe des Zeitraums und lag im Durchschnitt bei 7.86, was auf wechselnde Bedingungen für Pflanzenwachstum und Bodengesundheit hindeutet.
+
+Insgesamt zeigen die Daten eine dynamische klimatische Periode mit einer Vielzahl von Bedingungen, die sowohl Herausforderungen als auch Möglichkeiten für die allgemeine Lebensqualität in der Region darstellen könnten. Eine sorgfältige Analyse und Überwachung dieser klimatischen Variablen ist entscheidend, um Anpassungsstrategien zu entwickeln und die langfristige Nachhaltigkeit der Region zu gewährleisten.
 
 ## Earth Observation: Satellitendaten in der Analyse
 
@@ -85,7 +90,8 @@ Die Copernicus- und Landsat-Satelliten tragen eine Vielzahl von Instrumenten, di
 
 Die Landsat-Satelliten sind mit spezialisierten Sensoren ausgestattet, die auf eine Reihe von thermischen Wellenlängen/thermischer Infrarotstrahlung empfindlich sind. Sie messen nicht die Lufttemperatur, sondern die thermischen Eigenschaften der Erdoberfläche selbst, insbesondere die Emissivität -- die Effizienz, mit der ein Material thermische Energie ausstrahlt.
 
-Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der Auflösung unserer Daten. UrbanSens hat einen Downscaling-Algorithmus verwendet, der auf den unterschiedlichen Abstrahleigenschaften von Landbedeckungsklassen basiert, um eine höhere Auflösung zu erzielen. Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, ob es eine spürbare Veränderung in der Landoberflächentemperatur gegeben hat. Dies ermöglichte es uns, die Effektivität des Klimarondells bei der Beeinflussung der lokalen Temperaturbedingungen zu bewerten.
+Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der Auflösung unserer Daten. UrbanSens hat einen Downscaling-Algorithmus verwendet, der auf den unterschiedlichen Abstrahleigenschaften von Landbedeckungsklassen basiert, um eine höhere Auflösung zu erzielen.
+Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, ob es eine spürbare Veränderung in der Landoberflächentemperatur gegeben hat. Dies ermöglichte es uns, die Effektivität des Klimarondells bei der Beeinflussung der lokalen Temperaturbedingungen zu bewerten.
 
 <iframe src="https://opendata.wuerzburg.de/explore/embed/dataset/satellitenbeobachtung-rathausplatz/analyze/?location=22,49.79408,9.92809&amp;basemap=jawg.streets&amp;dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6Ik1JTiIsInlBeGlzIjoidmFsdWUiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNjZjMmE1In1dLCJ4QXhpcyI6ImRhdGUiLCJtYXhwb2ludHMiOiIiLCJ0aW1lc2NhbGUiOiJtb250aCIsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6InNhdGVsbGl0ZW5iZW9iYWNodHVuZy1yYXRoYXVzcGxhdHoiLCJvcHRpb25zIjp7fX19XSwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&amp;static=false&amp;datasetcard=false" width="800" height="300" frameborder="0">
 
@@ -93,7 +99,9 @@ Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der
 
 # Fazit und Ausblick
 
-Open Data bildet das Fundament für eine transparente und gemeinschaftliche Gestaltung von Klimaanpassungsstrategien. Der offene Zugriff auf klimabezogene Daten ermöglicht es, Maßnahmen präzise auf die Bedürfnisse lokaler Gemeinden abzustimmen. Hyperlokale Daten vertiefen unser Verständnis für spezifische Herausforderungen, während Satellitendaten mit ihrer hohen zeitlichen Auflösung die kontinuierliche Beobachtung klimatischer Veränderungen erlauben. Diese Kombination bietet eine dynamische Grundlage, um Anpassungsstrategien regelmäßig zu überprüfen und zu optimieren. Dadurch können wir effektiver auf lokale klimatische Veränderungen eingehen, was die Wirksamkeit von Klimaanpassungsmaßnahmen steigert und zugleich die Widerstandsfähigkeit und Lebensqualität der Menschen in den betroffenen Gemeinden verbessert.
+Open Data bildet das Fundament für eine transparente und gemeinschaftliche Gestaltung von Klimaanpassungsstrategien. Der offene Zugriff auf klimabezogene Daten ermöglicht es, Maßnahmen präzise auf die Bedürfnisse lokaler Gemeinden abzustimmen.
+Hyperlokale Daten vertiefen unser Verständnis für spezifische Herausforderungen, während Satellitendaten mit ihrer hohen zeitlichen Auflösung die kontinuierliche Beobachtung klimatischer Veränderungen erlauben. Diese Kombination bietet eine dynamische Grundlage, um Anpassungsstrategien regelmäßig zu überprüfen und zu optimieren.
+Dadurch können wir effektiver auf lokale klimatische Veränderungen eingehen, was die Wirksamkeit von Klimaanpassungsmaßnahmen steigert und zugleich die Widerstandsfähigkeit und Lebensqualität der Menschen in den betroffenen Gemeinden verbessert.
 
 ## References
 
