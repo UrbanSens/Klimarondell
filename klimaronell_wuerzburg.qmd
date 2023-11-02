@@ -65,7 +65,8 @@ Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. Sept
 
 ## Interaktive Visualisierung der gemessenen Daten
 
-<iframe src="https://opendata.wuerzburg.de/chart/embed/klimarondell2/?&amp;static=false&amp;datasetcard=false" width="800" height="600" frameborder="0">
+
+<iframe src="https://opendata.wuerzburg.de/chart/embed/klimarondell3/?&static=false&datasetcard=false" width="800" height="600" frameborder="0"></iframe>
 
 </iframe>
 
