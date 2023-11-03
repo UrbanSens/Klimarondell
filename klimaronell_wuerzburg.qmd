@@ -10,12 +10,12 @@ css: Settings.css
 ```{=html}
 <div id="cover-page">
   <div id="header">
-    <img class="left-logo" src="./WB_Logo.svg" alt="WB Logo">
-    <img class="right-logo" src="./logo02.png" alt="Logo 2">
+    <img class="left-logo" src="images/WB_Logo.svg" alt="WB Logo">
+    <img class="right-logo" src="images/logo02.png" alt="Logo 2">
   </div>
   
   <!-- Bild einfügen -->
-  <img src="./Festung.png" alt="Bild der Festung Marienberg" style="max-width: 100%; 
+  <img src="images/Festung.png" alt="Bild der Festung Marienberg" style="max-width: 100%; 
   height: auto; display: block; margin: 10mm auto;">
   
   <div style="height: 20mm;"></div>
@@ -34,7 +34,7 @@ Der greenovaTree, ein multifunktionales "Klimarondell", wurde als Prototyp im Se
 
 Im Rahmen des Testzeitraums bot das Projekt "Klimarondell" den Bürgerinnen und Bürgern die Möglichkeit, die innovative Anlage im Rathausinnenhof auf einer Fläche von etwa 1400 m² zu nutzen und ihre Eindrücke zu sammeln. Trotz der Herausforderung, dass über 90% des Ortes mit undurchlässigen Materialien bedeckt sind und die Bepflanzung mit Bäumen aufgrund eines darunterliegenden Parkplatzes nicht möglich ist, stellt der zentral gelegene und fußgängerfreundliche Innenhof einen wichtigen Ort im städtischen Gefüge dar. Die gesammelten Rückmeldungen aus der Bevölkerung sowie von Fachleuten werden in einer umfassenden Bewertung berücksichtigt, die darüber entscheidet, ob ähnliche Installationen zukünftig auch in anderen Stadtteilen und Gemeinden des Landkreises umgesetzt werden, um die Lebensqualität in urbanen Räumen während der Sommermonate zu verbessern.
 
-![Innbetriebnahme des Klimarondell](klimarondell.jpg)
+![Innbetriebnahme des Klimarondell](images/klimarondell.jpg)
 
 ## Der urbane Wärmeinsel-Effekt
 
@@ -81,7 +81,7 @@ UrbanSens hat in einer innovativen Analyse Satellitendaten der Copernicus-Serie 
 
 Die Copernicus- und Landsat-Satelliten tragen eine Vielzahl von Instrumenten, die in der Lage sind, verschiedene Arten von Daten zu sammeln, einschließlich der Temperatur der Landoberfläche anhand Ihrer Emissivitäts Werte. Diese Daten sind entscheidend, um Veränderungen in unserer Umwelt zu überwachen und zu verstehen. Die Pixel in den Satellitenbildern repräsentieren spezifische Bereiche auf der Erdoberfläche, und jede Änderung in ihrer Helligkeit oder Farbe kann auf eine Veränderung in den Umweltbedingungen hindeuten.
 
-![RathausPlatz](Main_Final.png)
+![RathausPlatz](images/Main_Final.png)
 
 Die Landsat-Satelliten sind mit spezialisierten Sensoren ausgestattet, die auf eine Reihe von thermischen Wellenlängen/thermischer Infrarotstrahlung empfindlich sind. Sie messen nicht die Lufttemperatur, sondern die thermischen Eigenschaften der Erdoberfläche selbst, insbesondere die Emissivität -- die Effizienz, mit der ein Material thermische Energie ausstrahlt.
 
