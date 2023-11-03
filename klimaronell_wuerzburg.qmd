@@ -26,7 +26,7 @@ css: Settings.css
 ```
 # Überblick über das Klimarondell-Projekt
 
-Das Projekt "Klimarondell" ist eine Kooperation im Rahmen der Maßnahme Heimatforum der "Smarten Region Würzburg" und dem Unternehmen "greenovacity". Ziel ist es, mit smarten Technologien die Lebensqualität während der Sommerhitze zu steigern. Ein Ansatzpunkt dabei ist der greenovaTree, ein Produkt des Start-Ups aus Baden-Württemberg. Nach Angaben des Herstellers soll dieser als "Oase in der Stadt" dienen und urbane Räume in kühle Rückzugsorte verwandeln.
+Das Projekt "Klimarondell" ist eine Kooperation im Rahmen der Maßnahme Heimatforum der "Smarten Region Würzburg" und dem Unternehmen "greenovacity GmbH". Ziel ist es, mit smarten Technologien die Lebensqualität während der Sommerhitze zu steigern. Ein Ansatzpunkt dabei ist der greenovaTree, ein Produkt des Start-Ups aus Baden-Württemberg. Nach Angaben des Herstellers soll dieser als "Oase in der Stadt" dienen und urbane Räume in kühle Rückzugsorte verwandeln.
 
 ## Smarte Region Würzburg testet ein Klimarondell
 
@@ -38,9 +38,9 @@ Im Rahmen des Testzeitraums bot das Projekt "Klimarondell" den Bürgerinnen und 
 
 ## Der urbane Wärmeinsel-Effekt
 
-Steigende Temperaturen in städtischen Bereichen, die durch den Urban Heat Island-Effekt (UHI) verstärkt werden, rücken zunehmend in den Fokus der Stadtbewohner und Planer. Der UHI ist größtenteils auf menschliche Aktivitäten zurückzuführen: Wärme wird in Bauwerken aus Beton und Asphalt gespeichert, die Abwärme von Gebäuden und Verkehr trägt zur Aufheizung bei, und die urbane Struktur limitiert natürliche Luftströmungen (Oke, 1982; Vujovic et al., 2021).
+Steigende Temperaturen in städtischen Bereichen, die durch den Urban Heat Island-Effekt (UHI) verstärkt werden, rücken zunehmend in den Fokus der Stadtbewohner und Planer. Der UHI ist auf menschliche Aktivitäten zurückzuführen: Wärme wird in Bauwerken aus Beton und Asphalt gespeichert, die Abwärme von Gebäuden und Verkehr trägt zur Aufheizung bei, und die urbane Struktur limitiert natürliche Luftströmungen (Oke, 1982; Vujovic et al., 2021).
 
-Ein fundiertes Verständnis der Hitzeentwicklung in städtischen Gebieten ist für die Bewertung von städtischen Risiken von Bedeutung, da städtische Hitze wesentliche Auswirkungen auf die öffentliche Gesundheit, den Energieverbrauch und die Umweltqualität hat. Zudem kann eine erhöhte Hitzebelastung gesundheitliche Beschwerden verstärken, insbesondere bei vulnerablen Bevölkerungsgruppen. Studien haben gezeigt, dass eine präzise Erfassung und Analyse städtischer Hitzebelastungen dazu beitragen kann, diese Risiken zu minimieren und dadurch die Lebensqualität sowie die Energieeffizienz in urbanen Räumen zu fördern (Heaviside et al., 2017; Sarrat et al., 2006; Yin et al., 2023; Reid et al., 2009)."
+Ein fundiertes Verständnis der Hitzeentwicklung in städtischen Gebieten ist für die Bewertung von lokalen Risiken von Bedeutung, da urbane Hitze wesentliche Auswirkungen auf die öffentliche Gesundheit, den Energieverbrauch und die Umweltqualität hat. Zudem kann eine erhöhte Hitzebelastung gesundheitliche Beschwerden verstärken, insbesondere bei vulnerablen Bevölkerungsgruppen. Studien haben gezeigt, dass eine präzise Erfassung und Analyse städtischer Hitzebelastungen dazu beitragen kann, diese Risiken zu minimieren und dadurch die Lebensqualität sowie die Energieeffizienz zu fördern (Heaviside et al., 2017; Sarrat et al., 2006; Yin et al., 2023; Reid et al., 2009)."
 
 # Die Geschichte der Daten
 
@@ -54,11 +54,11 @@ Die hier dargestellten Daten stammen vom Deutschen Wetterdienst (DWD). Der DWD i
 
 [*Deutscher Wetterdienst (DWD)*](https://www.dwd.de/DE/Home/home_node.html)
 
-Die zur Verfügung gestellten Temperaturdaten des Deutschen Wetterdienstes (DWD) für Würzburg im Zeitraum vom 22. August 2023 bis zum 16. September 2023 bieten einen umfassenden Einblick in die lokalen klimatischen Bedingungen, während gleichzeitig das Klimarondell in der Stadt aufgebaut war. Diese Konstellation ermöglicht eine einzigartige Perspektive auf die urbanen Temperaturverhältnisse.
+Die zur Verfügung gestellten Temperaturdaten des Deutschen Wetterdienstes (DWD) für Würzburg im Zeitraum vom 01. September 2023 bis zum 15. Oktober 2023 bieten einen umfassenden Einblick in die lokalen klimatischen Bedingungen, während gleichzeitig das Klimarondell in der Stadt aufgebaut war. Diese Konstellation ermöglicht eine einzigartige Perspektive auf die urbanen Temperaturverhältnisse.
 
 Die Wetterstation des DWD befindet sich auf einem Hügel am Rande der Stadt und liefert somit Daten, die weniger direkt von den urbanen Wärmeinsel-Effekten beeinflusst sind, welche in den zentraleren, dicht bebauten Stadtteilen auftreten können. Die durchschnittliche Temperatur in diesem Zeitraum lag bei etwa 19.55°C, mit Schwankungen zwischen 9.7°C und 31.1°C. Der Höchstwert von 31.1°C wurde am 24. August um 14:00 Uhr verzeichnet.
 
-Die Temperaturdaten aus Würzburg zeigen im Zeitraum vom 22. August bis 16. September 2023 deutliche Schwankungen, die auf natürliche Wettervariationen zurückzuführen sind. Diese Schwankungen müssen in weiteren Analysen, insbesondere bei der Untersuchung des Einflusses des Klimarondells, berücksichtigt werden, um präzise Schlussfolgerungen ziehen zu können.
+Die Temperaturdaten aus Würzburg zeigen während des beobachteten Zeitraums signifikante Schwankungen, die wahrscheinlich auf natürliche Wettervariationen zurückzuführen sind. Diese Schwankungen müssen in weiteren Analysen, insbesondere bei der Untersuchung des Einflusses des Klimarondells, berücksichtigt werden, um präzise Schlussfolgerungen ziehen zu können.
 
 ## Interaktive Visualisierung der gemessenen Daten
 
@@ -85,7 +85,7 @@ Die Copernicus- und Landsat-Satelliten tragen eine Vielzahl von Instrumenten, di
 
 Die Landsat-Satelliten sind mit spezialisierten Sensoren ausgestattet, die auf eine Reihe von thermischen Wellenlängen/thermischer Infrarotstrahlung empfindlich sind. Sie messen nicht die Lufttemperatur, sondern die thermischen Eigenschaften der Erdoberfläche selbst, insbesondere die Emissivität -- die Effizienz, mit der ein Material thermische Energie ausstrahlt.
 
-Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der Auflösung unserer Daten. UrbanSens hat einen Downscaling-Algorithmus verwendet, der auf den unterschiedlichen Abstrahleigenschaften von Landbedeckungsklassen basiert, um eine höhere Auflösung zu erzielen. Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, ob es eine spürbare Veränderung in der Landoberflächentemperatur gegeben hat. Dies ermöglichte es uns, die Effektivität des Klimarondells bei der Beeinflussung der lokalen Temperaturbedingungen zu bewerten.
+Zusätzlich ermöglichte die Sentinel-2-Kollektion der ESA eine Verbesserung der Auflösung unserer Daten. UrbanSens hat einen Downscaling-Algorithmus verwendet, der auf den unterschiedlichen Abstrahleigenschaften von Landbedeckungsklassen basiert, um eine höhere Auflösung zu erzielen. Durch den Vergleich der Satellitendaten vor und nach der Installation des Klimarondells konnten wir feststellen, dass eine Veränderung in der Landoberflächentemperatur aufgetreten ist. Es ist jedoch wichtig zu beachten, dass die festgestellte Temperaturreduktion im Zusammenhang mit den insgesamt sinkenden klimatischen Verhältnissen, wie sie vom Deutschen Wetterdienst (DWD) dokumentiert sind, steht.
 
 <iframe src="https://opendata.wuerzburg.de/explore/embed/dataset/satellitenbeobachtung-rathausplatz/analyze/?location=22,49.79408,9.92809&amp;basemap=jawg.streets&amp;dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6Ik1JTiIsInlBeGlzIjoidmFsdWUiLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNjZjMmE1In1dLCJ4QXhpcyI6ImRhdGUiLCJtYXhwb2ludHMiOiIiLCJ0aW1lc2NhbGUiOiJtb250aCIsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6InNhdGVsbGl0ZW5iZW9iYWNodHVuZy1yYXRoYXVzcGxhdHoiLCJvcHRpb25zIjp7fX19XSwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&amp;static=false&amp;datasetcard=false" width="800" height="300" frameborder="0">
 
