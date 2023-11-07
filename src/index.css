@@ -2,12 +2,17 @@
 @import "~leaflet/dist/leaflet.css";
 @import "~tachyons/css/tachyons.css";
 
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%; /* Ensure the html and body tags take up the full viewport height */
+  box-sizing: border-box; /* Border-box sizing to ensure padding and borders are included in the total width and height */
 }
 
-
+/* Ensure all children of body also use border-box sizing */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /* the popup CSS */
 .ol-popup {
   position: absolute;
@@ -44,15 +49,36 @@ body {
   margin-left: -11px;
 }
 
-/* the map container css */
+/* Adjust the map container to take the remaining height after the header */
 #map-container {
   position: relative;
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  height: calc(100vh - 40px); /* Adjust this value if the header's height changes */
+}
+
+#map {
+  flex: 1; /* Allow the map to fill the remaining space */
 }
 
 #map1, #map2 {
-  flex: 1;
+  width: 50%; /* Each map takes half the width */
+  height: 90%; /* Each map takes the full height of #map */
+  float: left; /* Not needed if using flexbox, but left in case of other considerations */
 }
+
+/* CSS for positioning the logo */
+.map-logo {
+  position: absolute;
+  bottom: 45px;
+  right: 15px; /* Position it at the bottom right */
+  z-index: 100; /* Ensure it's above the map layers */
+}
+
+.map-logo img {
+  width: 85px; /* Set half of your current size assuming the original was 50px */
+  height: auto; /* Maintain the aspect ratio */
+}
+
 
 

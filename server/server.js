@@ -1,44 +1,55 @@
 const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
+
 const app = express();
+app.use(express.json());
+app.use(cors()); // Enable CORS for all routes
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'usbase',
-  password: 'test',
-  port: 5434,
+  user: process.env.DB_USER || 'postgres',
+  host: process.env.DB_HOST || 'localhost',
+  database: process.env.DB_NAME || 'usbase',
+  password: process.env.DB_PASSWORD || 'test',
+  port: process.env.DB_PORT || 5434,
 });
 
-app.use(cors());
-app.use(express.json());
-
-app.post('/getPolygonData', async (req, res) => {
-    const { polygon } = req.body;
-    if (!polygon || !Array.isArray(polygon) || polygon.length < 3) {
-      return res.status(400).send('Bad Request: polygon is required and must have at least 3 points');
+app.get('/api/healthcare-distribution', async (req, res) => {
+  try {
+    const { polygonCoords } = req.query;
+    console.log("Received polygonCoords:", polygonCoords); // Log the polygonCoords to debug
+    if (!polygonCoords) {
+      return res.status(400).json({ error: 'polygonCoords is required' });
     }
-  
-    const closedPolygon = [...polygon, polygon[0]]; // Ensure the polygon is closed
-    const polygonText = `ST_GeomFromText('POLYGON((${closedPolygon.map(coord => coord.join(' ')).join(', ')}))', 4326)`;
-  
-    try {
-      const result = await pool.query(`
-        SELECT kn_gfk FROM merged_wue_lode
-        WHERE ST_Contains(
-          ${polygonText},
-          geom
-        )
-      `);
-  
-      res.json(result.rows.map(row => row.kn_gfk));
-    } catch (error) {
-      console.error(error.message); // Log only the error message to avoid leaking sensitive information
-      res.status(500).send('Server Error');
-    }
-  });
-  
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    // Transform the coordinates from EPSG:3857 to EPSG:4326 before using them in the query
+    const query = `
+      SELECT healthcare, COUNT(*) AS count
+      FROM health_wue
+      WHERE ST_Contains(
+        ST_Transform(ST_GeomFromText('POLYGON((${polygonCoords}))', 3857), 4326),
+        ST_SetSRID(ST_MakePoint(longitude, latitude), 4326)
+      )
+      GROUP BY healthcare;
+    `;
+
+    console.log("Executing query:", query); // Log the query to debug
+
+    const result = await pool.query(query);
+    res.json(result.rows);
+  } catch (queryError) {
+    console.error('Error executing query:', queryError.stack);
+    res.status(500).json({ 
+      error: 'Error executing query',
+      message: queryError.message,
+      query: queryError.query
+    });
+  }
+});
+
+
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});

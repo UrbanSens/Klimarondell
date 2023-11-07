@@ -1,0 +1,50 @@
+.histogram-plot {
+    display: flex;
+    flex-direction: column;
+    height: 300px; /* Increased height */
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+    transition: height 0.3s ease; /* Smooth transition for height changes */
+    width: 500px; /* Fixed width */
+  }
+  
+  .histogram-bar-container {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+  
+  .histogram-bar {
+    width: 40px; /* Wider bars */
+    margin: 0 5px; /* Add more space between bars */
+    background-color: blue; /* Set all bars to blue color */
+    height: 0; /* Initial height, will be set dynamically */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-size: 14px; /* Larger text */
+    border-radius: 4px 4px 0 0; /* Rounded tops of bars */
+    transition: all 0.3s ease; /* Smooth transition for bar height and color changes */
+    cursor: pointer; /* Cursor indicates interactivity */
+  }
+  
+  .histogram-label-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .histogram-label {
+    width: 40px; /* Align with the width of the bars */
+    margin: 0 5px; /* Align with the margin of the bars */
+    text-align: center;
+    font-size: 12px; /* Slightly smaller text for the labels */
+  }
+  

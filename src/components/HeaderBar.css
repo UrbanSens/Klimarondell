@@ -5,7 +5,8 @@
     background-color: #f8f8f8; /* Lighter grey color for an Apple-esque feel */
     padding: 5px 20px; /* Reduced padding for a slimmer look */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Lighter shadow for a subtle effect */
-    font-family: 'San Francisco', 'Helvetica Neue', sans-serif; /* Apple's San Francisco font, fallback to Helvetica Neue and sans-serif */
+    font-family: 'San Francisco', 'Helvetica Neue', sans-serif; 
+    height: 40px;
 }
 
 .logo {
