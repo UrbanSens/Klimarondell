@@ -13,41 +13,7 @@ html, body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-/* the popup CSS */
-.ol-popup {
-  position: absolute;
-  background-color: white;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #cccccc;
-  bottom: 12px;
-  left: -50px;
-  min-width: 280px;
-}
 
-.ol-popup:after, .ol-popup:before {
-  top: 100%;
-  border: solid transparent;
-  content: "";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.ol-popup:after {
-  border-top-color: white;
-  border-width: 10px;
-  left: 48px;
-  margin-left: -10px;
-}
-.ol-popup:before {
-  border-top-color: #cccccc;
-  border-width: 11px;
-  left: 48px;
-  margin-left: -11px;
-}
 
 /* Adjust the map container to take the remaining height after the header */
 #map-container {
@@ -55,16 +21,6 @@ html, body {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 40px); /* Adjust this value if the header's height changes */
-}
-
-#map {
-  flex: 1; /* Allow the map to fill the remaining space */
-}
-
-#map1, #map2 {
-  width: 50%; /* Each map takes half the width */
-  height: 90%; /* Each map takes the full height of #map */
-  float: left; /* Not needed if using flexbox, but left in case of other considerations */
 }
 
 /* CSS for positioning the logo */
@@ -79,6 +35,16 @@ html, body {
   width: 85px; /* Set half of your current size assuming the original was 50px */
   height: auto; /* Maintain the aspect ratio */
 }
+
+.toggle-window-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the button */
+  z-index: 10; /* Ensure it's above the maps */
+  /* Add more styling as needed */
+}
+
 
 
 

@@ -1,19 +1,16 @@
 .drawing-control {
-  position: absolute;
-  bottom: 50px;
-  left: 10px;
-  background: #333; /* Grey background color */
-  color: white; /* Text color */
-  padding: 10px;
-  border: none; /* Remove border */
-  border-radius: 10px; /* Rounder corners */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4); /* Slight shadow */
-  font-family: 'Helvetica Neue', sans-serif; /* Apple-like font */
-  font-size: 14px; /* Font size */
+  position: relative;
+  top: 50px; /* Adjust top as needed, increased from 40px to 60px */
+  left: 30px; /* Adjust left as needed */
+  z-index: 100; /* Ensure it's above the map layers */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 10px; /* Add some padding around the content */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.393); /* Optional: shadow for depth */
 }
 
 .drawing-control button {
-  background: #007AFF; /* Blue button background color */
+  background: #973437e0; /* Blue button background color */
   color: white; /* Button text color */
   border: none; /* Remove button border */
   border-radius: 6px; /* Rounder button corners */
@@ -23,5 +20,55 @@
 }
 
 .drawing-control button:hover {
-  background: #0055CC; /* Darker blue on hover */
+  background: #973437e0; /* Darker blue on hover */
 }
+
+.round-button {
+  border-radius: 50%;
+  width: 50px; /* Diameter of the button */
+  height: 50px; /* Diameter of the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333; /* Dark grey background */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  z-index: 10; /* Ensure it's above other map elements */
+  color: white; /* Color of the icon/text */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3); /* subtle shadow for depth */
+  transition: background-color 0.3s, box-shadow 0.3s; /* smooth transitions for effects */
+}
+
+.round-button:hover {
+  background-color: #555555; /* Lighter grey on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* larger shadow for hover effect */
+}
+
+.drawing-control button:hover {
+  background: #973437e0; /* Darker blue on hover */
+  /* If you want to keep the button color consistent with the .round-button style, you can use:
+  background: #555555; */
+}
+
+.drawing-options {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 70px; /* Position below the round button */
+  left: 10px; /* Align with the round button */
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 10; /* Ensure it's above other map elements */
+}
+
+/* Use this class to show the drawing options when the .round-button is clicked */
+.show {
+  display: block;
+}
+
+

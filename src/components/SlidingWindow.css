@@ -1,0 +1,16 @@
+.sliding-window {
+    position: fixed;
+    bottom: -50%; /* start off-screen below the view */
+    left: 0;
+    width: 100%;
+    height: 50%; /* the height of the sliding window */
+    background: rgb(255, 255, 255,0.1); /* less translucent white */
+    transition: bottom 0.5s; /* smooth sliding effect */
+    overflow-y: auto; /* in case the content overflows */
+    z-index: 1000; /* ensure it's above other content */
+  }
+  
+  .sliding-window.open {
+    bottom: 0; /* slide up to cover the bottom half of the screen */
+  }
+  

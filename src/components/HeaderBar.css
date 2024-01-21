@@ -1,29 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
 .header-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8; /* Lighter grey color for an Apple-esque feel */
-    padding: 5px 20px; /* Reduced padding for a slimmer look */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Lighter shadow for a subtle effect */
-    font-family: 'San Francisco', 'Helvetica Neue', sans-serif; 
-    height: 40px;
+    /*background-color: #b0aeae; /* A greyish tone */
+    /*background-image: linear-gradient(to bottom, #d4cfcf, #dcdcdc); /* Gradient effect */
+    padding: 5px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slightly darker shadow for depth */
+    font-family: 'Roboto Mono', monospace;
+    height: 40px; /* Adjust the height as needed */
 }
 
 .logo {
-    height: 30px; /* Reduced size for a sleeker look */
+    height: 35px; /* Adjust the size as needed */
 }
 
 .navigation {
     display: flex;
-    gap: 20px; /* Gap between navigation links */
+    gap: 20px;
 }
 
 .nav-link {
-    color: #555; /* Darker text color */
-    text-decoration: none; /* No underlines for the links */
-    transition: color 0.3s; /* Smooth color transition for hover effect */
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 400; /* Regular font weight */
 }
 
 .nav-link:hover {
-    color: #333; /* Slightly darker text on hover */
+    color: #333;
+}
+
+.icon {
+    color: #666; /* A softer shade of grey for the icon */
+    font-size: 1.5em; /* Adjust the size as needed */
+    transition: color 0.2s; /* Transition for hover effect */
+}
+
+.icon:hover {
+    color: #333; /* Darken the icon on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    transition: transform 0.2s, color 0.2s; /* Smooth transitions for hover effects */
 }

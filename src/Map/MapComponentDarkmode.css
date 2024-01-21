@@ -1,0 +1,142 @@
+/* Dark Mode CSS */
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+
+.dark-mode {
+    --background-color: #333333; /* Dark gray */
+    --text-color: #ededed; /* White */
+    --toggle-button-background: #333333; /* Darker gray */
+    --toggle-button-hover-background: #303030c4; /* Even darker gray */
+    --window-controls-background: #333333; /* Dark background for controls */
+    --slider-track-background: #555555; /* Dark slider track */
+    --slider-thumb-background: #aaaaaa; /* Light slider thumb */
+    --button-background: #333333; /* Dark button background */
+    --button-hover-background: #555555; /* Dark button hover */
+    --button-active-background: #777777; /* Dark button active */
+    --opacity-slider-background: #686666; /* Dark background for opacity slider */
+    --control-background: #333333; /* Slightly transparent white for controls */
+  }
+
+  .dark-mode .header-bar {
+    background-color: #323232; /* Darker background for dark mode */
+    background-image: linear-gradient(to bottom, #424242, #303030); /* Dark gradient effect */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Shadow adapted for dark mode */
+    /* Other dark mode styles as needed */
+}
+
+.dark-mode .nav-link {
+    color: #ccc; /* Lighter color for links */
+}
+
+.dark-mode .nav-link:hover {
+    color: #fff; /* Even lighter on hover */
+}
+
+.dark-mode .icon {
+    color: #999; /* Lighter icon color */
+}
+
+.dark-mode .icon:hover {
+    color: #ddd; /* Lighter on hover */
+}
+
+.dark-mode .icon:hover {
+    color: #bbb; /* Lighter on hover */
+}
+  
+  .dark-mode .map-container {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .dark-mode .toggle-stats-button,
+  .dark-mode .toggle-window-controls {
+    background-color: var(--toggle-button-background);
+    color: var(--text-color);
+  }
+  
+  .dark-mode .toggle-stats-button:hover,
+  .dark-mode .toggle-window-controls:hover {
+    background-color: var(--toggle-button-hover-background);
+  }
+  
+  .dark-mode .sliding-window {
+    background: var(--control-background);
+  }
+  
+  .dark-mode .window-controls.open {
+    background-color: var(--window-controls-background);
+    color: var(--text-color);
+  }
+  
+  .dark-mode .opacity-slider {
+    background: var(--opacity-slider-background);
+  }
+  
+  .dark-mode .opacity-slider::-webkit-slider-thumb {
+    background: var(--slider-thumb-background);
+  }
+  
+  .dark-mode .opacity-slider::-moz-range-thumb {
+    background: var(--slider-thumb-background);
+  }
+  
+  .dark-mode .switch .slider {
+    background-color: var(--slider-track-background);
+  }
+  
+  .dark-mode .switch .slider:before {
+    background-color: var(--slider-thumb-background);
+  }
+  
+  .dark-mode .switch input:checked + .slider {
+    background-color: var(--button-background);
+  }
+  
+  .dark-mode .switch input:checked + .slider:before {
+    background-color: var(--text-color);
+  }
+
+  .dark-mode .drawing-control {
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .dark-mode .toggle-drawing-controls {
+    background: var(--button-background);
+    color: var(--text-color);
+  }
+  
+  .dark-mode .toggle-drawing-controls:hover {
+    background: var(--button-hover-background);
+  }
+  
+  .dark-mode .toggle-drawing-controls:active {
+    background: var(--button-active-background);
+  }
+  
+  .dark-mode .slider-container {
+    background: var(--control-background);
+  }
+  
+  .dark-mode .slider-text {
+    color: var(--text-color);
+  }
+  
+  .dark-mode .switch-label {
+    color: var(--text-color);
+  }
+
+
+.dark-mode .drawing-control {
+  background: #333333; /* Dark background for semi-transparent effect */
+}
+
+.dark-mode .drawing-control button {
+  background: #5b6c7d; /* More subdued button background color */
+}
+
+.dark-mode .drawing-control button:hover {
+  background: #404e5c; /* Even darker on hover */
+}

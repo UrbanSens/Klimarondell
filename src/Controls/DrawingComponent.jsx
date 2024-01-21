@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Draw, Modify, Translate } from 'ol/interaction';
 import { Collection } from 'ol';
 
+
 class DrawingComponent extends Component {
   static propTypes = {
     map: PropTypes.object.isRequired,
