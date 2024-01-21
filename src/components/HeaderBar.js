@@ -29,3 +29,6 @@ const HeaderBar = (props) => {
 }
 
 export default HeaderBar;
+
+// Path: src/components/MapComponent.js
+// Compare this snippet from src/components/MapComponent.js:
